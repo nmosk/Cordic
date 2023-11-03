@@ -1,0 +1,144 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../cordiccart2pol.cpp in debug mode
+   Generating csim.exe
+---Testing results----------------------------------
+cos_shift: -81470
+sin_shift: -12690
+cos_shift: 47080
+sin_shift: -34390
+cos_shift: 32137
+sin_shift: -5425
+cos_shift: -16747
+sin_shift: -1305
+cos_shift: 8455
+sin_shift: -395
+cos_shift: -4240
+sin_shift: -68
+cos_shift: 2120
+sin_shift: -33
+cos_shift: -1061
+sin_shift: -1
+cos_shift: 530
+sin_shift: -5
+cos_shift: 265
+sin_shift: -1
+cos_shift: 132
+sin_shift: -1
+cos_shift: 66
+sin_shift: -1
+cos_shift: 33
+sin_shift: -1
+cos_shift: 16
+sin_shift: -1
+cos_shift: -9
+sin_shift: -1
+cos_shift: 4
+sin_shift: -1
+Test: x=0.8147, y=0.1269, golden theta=0.1545, golden r=0.8245, your theta=0.1545, your r=0.8245
+cos_shift: 63230
+sin_shift: -27850
+cos_shift: -45540
+sin_shift: -17690
+cos_shift: 27192
+sin_shift: -2540
+cos_shift: -13914
+sin_shift: -2129
+cos_shift: -7090
+sin_shift: -195
+cos_shift: 3551
+sin_shift: -125
+cos_shift: 1777
+sin_shift: -7
+cos_shift: -889
+sin_shift: -11
+cos_shift: -445
+sin_shift: -2
+cos_shift: -223
+sin_shift: -1
+cos_shift: 111
+sin_shift: -1
+cos_shift: 55
+sin_shift: -1
+cos_shift: 27
+sin_shift: -1
+cos_shift: 13
+sin_shift: -1
+cos_shift: -7
+sin_shift: -1
+cos_shift: 3
+sin_shift: -1
+Test: x=0.6323, y=-0.2785, golden theta=-0.4149, golden r=0.6909, your theta=-0.4149, your r=0.6909
+cos_shift: 54689
+sin_shift: -95750
+cos_shift: 75219
+sin_shift: -20531
+cos_shift: -42743
+sin_shift: -8540
+cos_shift: 22438
+sin_shift: -1074
+cos_shift: -11287
+sin_shift: -866
+cos_shift: -5671
+sin_shift: -81
+cos_shift: 2836
+sin_shift: -49
+cos_shift: 1418
+sin_shift: -3
+cos_shift: -710
+sin_shift: -5
+cos_shift: -355
+sin_shift: -1
+cos_shift: -178
+sin_shift: -1
+cos_shift: 88
+sin_shift: -1
+cos_shift: 44
+sin_shift: -1
+cos_shift: -23
+sin_shift: -1
+cos_shift: -12
+sin_shift: -1
+cos_shift: -6
+sin_shift: -1
+Test: x=-0.5469, y=-0.9575, golden theta=-2.0898, golden r=1.1027, your theta=-2.0897, your r=1.1027
+cos_shift: -48540
+sin_shift: -70030
+cos_shift: -59285
+sin_shift: -10745
+cos_shift: 32328
+sin_shift: -9449
+cos_shift: 17345
+sin_shift: -684
+cos_shift: -8716
+sin_shift: -743
+cos_shift: -4381
+sin_shift: -99
+cos_shift: 2192
+sin_shift: -20
+cos_shift: -1097
+sin_shift: -8
+cos_shift: 548
+sin_shift: -1
+cos_shift: -275
+sin_shift: -1
+cos_shift: -138
+sin_shift: -1
+cos_shift: -69
+sin_shift: -1
+cos_shift: 34
+sin_shift: -1
+cos_shift: 17
+sin_shift: -1
+cos_shift: 8
+sin_shift: -1
+cos_shift: -5
+sin_shift: -1
+Test: x=-0.4854, y=0.7003, golden theta=2.1769, golden r=0.8521, your theta=2.1769, your r=0.8521
+---RMS error----------------------------------
+----------------------------------------------
+   RMSE(R)           RMSE(Theta)
+0.000000034798518 0.000043671923777
+----------------------------------------------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

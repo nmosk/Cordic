@@ -1,0 +1,653 @@
+Starting C synthesis ...
+C:/Xilinx/Vitis_HLS/2023.1/bin/vitis_hls.bat C:/Users/nate/Desktop/WES_237C/Mosk_project3_DFT/dft_256_precomputed/dft256/solution1/csynth.tcl
+ECHO is off.
+NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'nate' on host 'desktop-cp91j1o' (Windows NT_amd64 version 6.2) on Wed Nov 22 04:07:24 -0800 2023
+INFO: [HLS 200-10] In directory 'C:/Users/nate/Desktop/WES_237C/Mosk_project3_DFT/dft_256_precomputed'
+Sourcing Tcl script 'C:/Users/nate/Desktop/WES_237C/Mosk_project3_DFT/dft_256_precomputed/dft256/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/nate/Desktop/WES_237C/Mosk_project3_DFT/dft_256_precomputed/dft256/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project dft256 
+INFO: [HLS 200-10] Opening project 'C:/Users/nate/Desktop/WES_237C/Mosk_project3_DFT/dft_256_precomputed/dft256'.
+INFO: [HLS 200-1510] Running: set_top dft 
+INFO: [HLS 200-1510] Running: add_files coefficients256.h 
+INFO: [HLS 200-10] Adding design file 'coefficients256.h' to the project
+INFO: [HLS 200-1510] Running: add_files dft.cpp 
+INFO: [HLS 200-10] Adding design file 'dft.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files dft.h 
+INFO: [HLS 200-10] Adding design file 'dft.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dft_test.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'dft_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb out.gold.dat -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/nate/Desktop/WES_237C/Mosk_project3_DFT/dft_256_precomputed/dft256/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: source ./dft256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dft dft 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite dft real_sample 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.171 seconds; current allocated memory: 89.312 MB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.495 seconds; current allocated memory: 91.109 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-248] Applying array_partition to 'c_LUT': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to 's_LUT': Complete partitioning on dimension 1.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4641.52 seconds; current allocated memory: 92.039 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 92.039 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.426 seconds; current allocated memory: 92.039 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.138 seconds; current allocated memory: 92.039 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_46_4' (dft.cpp:46) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_55_5' (dft.cpp:55) in function 'dft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.983 seconds; current allocated memory: 92.039 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_42_3' (dft.cpp:42:20) in function 'dft'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.039 seconds; current allocated memory: 92.039 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_3_VITIS_LOOP_46_4'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' (loop 'VITIS_LOOP_42_3_VITIS_LOOP_46_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('add2', dft.cpp:49) and 'select' operation ('select_ln42_2', dft.cpp:42).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' (loop 'VITIS_LOOP_42_3_VITIS_LOOP_46_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('add2', dft.cpp:49) and 'select' operation ('select_ln42_2', dft.cpp:42).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' (loop 'VITIS_LOOP_42_3_VITIS_LOOP_46_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('add2', dft.cpp:49) and 'select' operation ('select_ln42_2', dft.cpp:42).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' (loop 'VITIS_LOOP_42_3_VITIS_LOOP_46_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('add2', dft.cpp:49) and 'select' operation ('select_ln42_2', dft.cpp:42).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' (loop 'VITIS_LOOP_42_3_VITIS_LOOP_46_4'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'fadd' operation ('add2', dft.cpp:49) and 'select' operation ('select_ln42_2', dft.cpp:42).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 21, loop 'VITIS_LOOP_42_3_VITIS_LOOP_46_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 8.264 seconds; current allocated memory: 92.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.09 seconds; current allocated memory: 92.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_55_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_55_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_55_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.515 seconds; current allocated memory: 92.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 92.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 92.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 92.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' pipeline 'VITIS_LOOP_42_3_VITIS_LOOP_46_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4' is 16465 from HDL expression: ((icmp_ln42_reg_9051 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_256_8_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4'.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_16_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_17_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_18_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_19_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_20_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_21_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_22_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_23_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_24_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_25_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_26_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_27_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_28_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_29_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_30_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_31_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_32_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_33_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_34_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_35_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_36_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_37_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_38_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_39_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_40_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_41_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_42_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_43_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_44_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_45_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_46_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_47_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_48_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_49_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_50_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_51_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_52_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_53_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_54_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_55_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_56_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_57_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_58_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_59_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_60_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_61_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_62_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_63_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_64_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_65_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_66_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_67_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_68_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_69_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_70_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_71_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_72_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_73_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_74_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_75_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_76_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_77_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_78_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_79_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_80_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_81_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_82_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_83_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_84_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_85_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_86_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_87_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_88_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_89_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_90_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_91_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_92_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_93_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_94_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_95_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_96_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_97_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_98_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_99_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_100_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_101_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_102_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_103_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_104_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_105_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_106_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_107_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_108_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_109_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_110_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_111_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_112_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_113_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_114_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_115_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_116_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_117_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_118_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_119_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_120_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_121_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_122_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_123_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_124_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_125_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_126_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_127_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_128_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_129_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_130_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_131_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_132_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_133_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_134_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_135_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_136_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_137_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_138_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_139_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_140_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_141_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_142_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_143_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_144_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_145_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_146_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_147_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_148_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_149_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_150_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_151_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_152_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_153_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_154_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_155_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_156_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_157_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_158_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_159_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_160_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_161_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_162_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_163_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_164_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_165_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_166_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_167_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_168_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_169_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_170_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_171_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_172_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_173_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_174_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_175_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_176_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_177_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_178_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_179_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_180_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_181_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_182_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_183_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_184_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_185_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_186_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_187_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_188_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_189_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_190_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_191_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_192_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_193_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_194_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_195_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_196_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_197_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_198_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_199_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_200_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_201_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_202_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_203_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_204_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_205_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_206_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_207_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_208_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_209_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_210_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_211_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_212_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_213_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_214_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_215_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_216_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_217_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_218_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_219_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_220_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_221_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_222_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_223_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_224_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_225_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_226_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_227_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_228_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_229_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_230_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_231_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_232_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_233_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_234_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_235_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_236_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_237_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_238_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_239_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_240_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_241_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_242_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_243_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_244_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_245_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_246_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_247_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_248_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_249_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_250_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_251_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_252_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_253_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_254_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_c_LUT_255_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_16_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_17_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_18_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_19_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_20_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_21_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_22_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_23_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_24_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_25_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_26_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_27_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_28_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_29_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_30_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_31_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_32_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_33_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_34_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_35_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_36_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_37_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_38_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_39_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_40_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_41_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_42_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_43_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_44_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_45_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_46_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_47_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_48_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_49_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_50_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_51_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_52_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_53_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_54_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_55_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_56_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_57_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_58_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_59_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_60_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_61_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_62_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_63_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_64_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_65_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_66_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_67_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_68_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_69_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_70_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_71_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_72_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_73_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_74_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_75_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_76_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_77_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_78_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_79_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_80_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_81_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_82_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_83_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_84_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_85_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_86_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_87_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_88_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_89_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_90_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_91_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_92_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_93_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_94_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_95_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_96_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_97_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_98_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_99_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_100_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_101_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_102_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_103_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_104_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_105_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_106_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_107_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_108_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_109_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_110_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_111_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_112_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_113_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_114_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_115_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_116_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_117_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_118_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_119_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_120_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_121_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_122_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_123_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_124_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_125_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_126_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_127_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_128_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_129_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_130_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_131_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_132_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_133_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_134_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_135_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_136_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_137_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_138_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_139_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_140_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_141_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_142_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_143_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_144_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_145_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_146_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_147_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_148_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_149_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_150_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_151_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_152_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_153_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_154_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_155_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_156_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_157_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_158_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_159_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_160_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_161_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_162_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_163_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_164_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_165_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_166_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_167_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_168_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_169_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_170_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_171_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_172_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_173_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_174_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_175_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_176_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_177_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_178_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_179_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_180_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_181_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_182_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_183_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_184_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_185_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_186_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_187_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_188_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_189_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_190_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_191_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_192_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_193_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_194_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_195_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_196_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_197_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_198_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_199_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_200_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_201_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_202_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_203_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_204_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_205_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_206_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_207_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_208_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_209_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_210_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_211_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_212_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_213_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_214_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_215_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_216_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_217_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_218_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_219_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_220_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_221_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_222_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_223_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_224_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_225_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_226_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_227_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_228_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_229_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_230_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_231_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_232_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_233_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_234_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_235_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_236_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_237_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_238_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_239_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_240_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_241_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_242_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_243_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_244_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_245_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_246_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_247_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_248_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_249_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_250_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_251_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_252_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_253_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_254_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_42_3_VITIS_LOOP_46_4_s_LUT_255_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7 seconds. CPU system time: 2 seconds. Elapsed time: 13.236 seconds; current allocated memory: 100.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_55_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dft_Pipeline_VITIS_LOOP_55_5' pipeline 'VITIS_LOOP_55_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft_Pipeline_VITIS_LOOP_55_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 3.068 seconds; current allocated memory: 128.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/imag_sample' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dft' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'real_sample', 'imag_sample' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft'.
+INFO: [RTMG 210-278] Implementing memory 'dft_real_temp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.431 seconds; current allocated memory: 131.805 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 6 seconds. Elapsed time: 32.294 seconds; current allocated memory: 156.547 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 19.551 seconds; current allocated memory: 171.855 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dft.
+INFO: [VLOG 209-307] Generating Verilog RTL for dft.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 27 seconds. CPU system time: 10 seconds. Elapsed time: 4727.9 seconds; current allocated memory: 83.023 MB.
+INFO: [HLS 200-112] Total CPU user time: 28 seconds. Total CPU system time: 11 seconds. Total elapsed time: 4730.03 seconds; peak allocated memory: 172.367 MB.
+Finished C synthesis.

@@ -65,8 +65,10 @@ int main()
 		if (gold != D[i]){
 			printf("miss match: i: %d\tgolden: %d\toutput: %d\n", i, gold, D[i] );
 			result = 1;
-
 		}
+		//else printf("got match: i: %d\tgolden: %d\toutput: %d\n", i, gold, D[i] );
+
+
 	}
 
 	fclose(fp);

@@ -25,6 +25,7 @@ void demod(DTYPE X_R[SIZE], DTYPE X_I[SIZE], int D[SIZE], DTYPE OUT_R[SIZE], DTY
 {
 
 	fft(X_R, X_I, OUT_R, OUT_I);
+	bit_reverse(OUT_R, OUT_I,OUT_R, OUT_I);
 	qpsk_decode(OUT_R, OUT_I, D);
 
 }
@@ -184,7 +185,7 @@ void fft_stage(INTTYPE stage, DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OR[SIZE], 
 }
 
 
-
+/*
 void export_fft(float *inR, float *inI, float *outR, float *outI,int len)
 {
 #pragma HLS INTERFACE s_axilite port=return bundle=my_fft
@@ -206,7 +207,7 @@ void export_fft(float *inR, float *inI, float *outR, float *outI,int len)
 	memcpy(outR,(const float*)outBuffR,len*sizeof(float));
 	memcpy(outI,(const float*)outBuffI,len*sizeof(float));
 }
-
+*/
 
 
 
